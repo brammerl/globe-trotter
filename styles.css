@@ -112,11 +112,34 @@ footer {
     width: 100vw;
 }
 
+.footer-content {
+    display: flex;
+    flex-direction: row;
+}
+
+footer .publishing-info {
+    align-self: flex-start;
+    width: 50vw;
+}
+footer .input-box {
+    display: flex;
+    align-self: flex-end;
+    position: relative;
+    width: 50vw;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 3vw;
+}
+
+footer .input-box input {
+    height: 25%;
+    margin-right: 10px
+}
+
 .attractionsCollection {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-
 }
 
 .attractionCard {
@@ -139,6 +162,43 @@ footer {
 .card-photo {
     height: 50%;
 }
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: grey;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
 @media only screen 
   and (min-width: 0px) 
