@@ -1,7 +1,24 @@
+.roboto-100 {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+  
+
 .mainContainer {
     display: flex;
     flex-flow: column;
     text-align: center;
+}
+nav {
+    width: 100vw;
 }
 .navigation {
     display: flex;
@@ -9,32 +26,91 @@
     justify-content: center;
     list-style: none;
     background: skyblue;
-    padding: 1em
+    padding: 1em;
+    margin-top: 0;
 }
 
 .navigation a {
     padding: 1em
 }
-
-.headerPhoto {
-    width: 100%;
-    max-height: 25rem;
-}
-.content {
-    text-align: center
-}
-
 .header {
     display: flex;
-    flex-flow: column;
-    height: 10%
-}
-.header h1 {
-    margin-bottom: 0px;
-    background: skyblue;
-    padding: 0.5em
+    height: 50vh;
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    justify-items: center;
 }
 
+.header h1 {
+    position: relative;
+    z-index: 1;
+    top: 50%;
+    color: rgb(190, 190, 190);
+}
+
+.header .overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.header img {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    object-fit: cover;
+}
+
+.splash-page-content {
+    display: flex;
+    align-items: center;
+}
+
+.splash-page-content .content {
+    width: 80vw;
+    justify-content: center;
+    justify-items: center;
+    margin-right: 10vw;
+    margin-left: 10vw;
+}
+
+.splash-page-content .img-box {
+    border-style:dotted;
+    border-width: 10px;
+    border-color:  skyblue;
+    border-radius: 20%;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    padding: 0;
+    margin-right: 10vw;
+    margin-top: 1vh;
+}
+
+.img-box  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.main-content {
+    text-align: center;
+}
+
+footer {
+    background-color: skyblue;
+    width: 100vw;
+}
 
 .attractionsCollection {
     display: flex;
@@ -49,22 +125,44 @@
     max-width: 25%;
     padding: 1rem;
     margin: 1rem;
+    display: flex;
+    flex-direction: column;
 }
-
 
 .attractionCard img {
     max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    position: relative;
+}
+
+.card-photo {
+    height: 50%;
 }
 
 @media only screen 
-  and (min-width: 375px) 
+  and (min-width: 0px) 
   and (max-width: 812px)  { 
 
     .attractionsCollection {
         display: flex;
+        flex-direction: column;
         justify-items: center;
     }
     .attractionCard {
         max-width: 75%
+    }
+
+    .splash-page-content {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .splash-page-content .img-box {
+        margin-right: 0px;
+
     }
 }
